@@ -1,0 +1,9 @@
+@echo off
+cd /d "C:\Users\dell_\Desktop\imam\AI"
+echo Installing dependencies...
+python -m pip install -r requirements.txt
+echo Verifying TensorFlow import...
+python -c "import tensorflow as tf; print(tf.__version__); import tensorflow.keras as keras; print('keras ok')"
+echo Running training script...
+python train.py --synthetic --output data/models
+pause
